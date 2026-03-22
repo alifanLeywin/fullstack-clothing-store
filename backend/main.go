@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"store-backend/config"
 	"store-backend/models"
+	"store-backend/routes"
 
 	"github.com/gin-gonic/gin"
 	
@@ -26,6 +27,8 @@ func main(){
 				"message": "Server V1",
 			})
 		})
+
+		routes.SetupRoutes(r)
 
 		r.Run()
 		
